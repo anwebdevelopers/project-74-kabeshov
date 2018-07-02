@@ -1,0 +1,68 @@
+.symptoms {
+    padding: 10rem 0;
+}
+.symptoms__list {
+    padding: 0;
+    list-style: none;
+    margin: 8rem 20% 0 0;
+}
+.symptoms__list-item {
+    margin: 8rem 0 0 0;
+
+    display: flex;
+}
+.symptoms__list-img {
+    margin: 0;
+    flex: 0 0 auto;
+    width: 15%;
+    text-align: center;
+    img {
+        max-width: 100%;
+        width: auto;
+        height: auto;
+    }
+}
+.symptoms__list-text {
+    flex: 1 1 auto;
+    align-self: center;
+    margin: 0 0 0 5%;
+}
+@media only screen and (max-width : 1460px) {
+
+}
+
+@media only screen and (max-width : 1200px) {
+
+}
+
+@media only screen and (max-width : 992px) {
+
+}
+
+@media only screen and (max-width : 768px) {
+    .symptoms__list {
+        margin: 8rem 0 0 0;
+    }
+}
+
+@media only screen and (max-width : 640px) {
+
+}
+
+@media only screen and (max-width : 480px) {
+
+}
+
+@media only screen and (max-width : 360px) {
+    .symptoms__list-item {
+        display: block;
+        text-align: center;
+    }
+    .symptoms__list-img {
+        width: auto;
+        text-align: center;
+    }
+    .symptoms__list-text {
+        margin: 5rem 0 0 0;
+    }
+}

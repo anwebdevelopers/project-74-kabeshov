@@ -1,0 +1,44 @@
+.consult {
+    padding: 10rem 0;
+}
+.consult__box {
+    display: flex;
+}
+.consult__form {
+    flex: 0 0 auto;
+    width: 45%;
+    padding: 0 4%;
+}
+
+@media only screen and (max-width : 1460px) {
+
+}
+
+@media only screen and (max-width : 1200px) {
+
+}
+
+@media only screen and (max-width : 992px) {
+
+}
+
+@media only screen and (max-width : 768px) {
+    .consult__box {
+        display: block;
+    }
+    .consult__form {
+        width: auto;
+    }
+}
+
+@media only screen and (max-width : 640px) {
+
+}
+
+@media only screen and (max-width : 480px) {
+
+}
+
+@media only screen and (max-width : 360px) {
+
+}
