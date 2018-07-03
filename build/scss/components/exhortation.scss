@@ -1,0 +1,105 @@
+.exhortation {
+    padding: 10rem 0;
+}
+.exhortation__box {
+    margin: 8rem 0 0 0;
+    padding: 0;
+    list-style: none;
+
+    color: #fff;
+
+    display: flex;
+    flex-wrap: wrap;
+}
+.exhortation__item {
+    flex: 0 0 auto;
+    width: 50%;
+    padding: 6rem 5%;
+    // &:nth-child(6n-5) {
+    //     background-color: #1f9ee2;
+    // }
+    // &:nth-child(6n-4) {
+    //     background-color: #31c1b9;
+    // }
+    // &:nth-child(6n-3) {
+    //     background-color: #1f84e2;
+    // }
+    // &:nth-child(6n-2) {
+    //     background-color: #31c190;
+    // }
+    // &:nth-child(6n-1) {
+    //     background-color: #1f6de2;
+    // }
+    // &:nth-child(6n) {
+    //     background-color: #42c131;
+    // }
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+}
+.exhortation__item-title {
+    background: none;
+    color: inherit;
+    display: block;
+    font-size: 10rem;
+    line-height: .8;
+    font-weight: 700;
+}
+.exhortation__item-text {
+    margin: 3rem 0 0 0;
+}
+.exhortation__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    color: #4c4c4c;
+    li {
+        &:not(:first-child) {
+            margin-top: 3rem;
+        }
+        padding: 0 0 0 2rem;
+        position: relative;
+        &:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 1.3rem;
+            width: .5rem;
+            height: .5rem;
+            border-radius: 50%;
+            background-color: $color-green;
+        }
+    }
+}
+@media only screen and (max-width : 1460px) {
+
+}
+
+@media only screen and (max-width : 1200px) {
+
+}
+
+@media only screen and (max-width : 992px) {
+
+}
+
+@media only screen and (max-width : 768px) {
+
+}
+
+@media only screen and (max-width : 640px) {
+    .exhortation__box {
+        display: block;
+    }
+    .exhortation__item {
+        width: auto;
+    }
+}
+
+@media only screen and (max-width : 480px) {
+
+}
+
+@media only screen and (max-width : 360px) {
+
+}

@@ -54,9 +54,11 @@
 }
 
 @media only screen and (max-width : 360px) {
+    .symptoms {
+        text-align: center;
+    }
     .symptoms__list-item {
         display: block;
-        text-align: center;
     }
     .symptoms__list-img {
         width: auto;

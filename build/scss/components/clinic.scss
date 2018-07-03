@@ -1,0 +1,128 @@
+.clinic {
+    padding: 10rem 0;
+}
+.clinic__box {
+    margin: 8rem 0 0 0;
+    display: flex;
+}
+.clinic__content {
+    flex: 0 0 auto;
+    width: 60%;
+}
+.clinic__item {
+    margin: 0;
+    img {
+        max-width: 100%;
+        width: auto;
+        height: auto;
+    }
+}
+.clinic__slider {
+    &.slider {
+        &.owl-carousel {
+            .owl-nav {
+                position: absolute;
+                // top: 50%;
+                left: 7%;
+                bottom: 5rem;
+                // transform: translateX(50%);
+                // left: -7rem;
+                // right: -7rem;
+                //top: 37%;
+                display: flex;
+                //justify-content: flex-end;
+                .owl-next,
+                .owl-prev {
+                    flex: 0 0 auto;
+                    // position: absolute;
+                    // top: 0;
+                    // transform: translateY(-50%);
+                    width: 6rem;
+                    height: 6rem;
+                    transition: all 0.3s ease;
+                    //background-color: $main-color;
+
+                    &:hover, &:active {
+                        // transform: scale(1.1);
+                        &:before {
+                            border-color: $color-accent;
+                        }
+                    }
+                    position: relative;
+                    &:before {
+                        content: '';
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        width: 2.5rem;
+                        height: 2.5rem;
+                        border-left: .5rem solid #fff;
+                        border-bottom: .5rem solid #fff;
+                        transition: all 0.3s ease;
+                    }
+
+                }
+
+                .owl-prev {
+                    // left: -6rem;
+                    //margin-right: .2rem;
+                    background-color: $color-green;
+                    &:before {
+                        left: 60%;
+                        transform: translate(-50%, -50%) rotate(45deg);
+                    }
+                }
+
+                .owl-next {
+                    // right: -6rem;
+                    //margin-left: .2rem;
+                    background-color: $color-blue;
+                    &:before {
+                        left: 40%;
+                        transform: translate(-50%, -50%) rotate(-135deg);
+                    }
+                }
+            }
+        }
+    }
+}
+.clinic__map {
+    flex: 0 0 auto;
+    width: 40%;
+}
+@media only screen and (max-width : 1460px) {
+
+}
+
+@media only screen and (max-width : 1200px) {
+
+}
+
+@media only screen and (max-width : 992px) {
+
+}
+
+@media only screen and (max-width : 768px) {
+    .clinic__box {
+        display: block;
+    }
+    .clinic__content {
+        width: auto;
+    }
+    .clinic__map {
+        width: auto;
+        height: 80rem;
+    }
+}
+
+@media only screen and (max-width : 640px) {
+
+}
+
+@media only screen and (max-width : 480px) {
+
+}
+
+@media only screen and (max-width : 360px) {
+
+}

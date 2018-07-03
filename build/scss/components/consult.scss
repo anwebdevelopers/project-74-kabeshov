@@ -1,15 +1,58 @@
 .consult {
-    padding: 10rem 0;
+    // padding: 10rem 0;
+
+    position: relative;
+    z-index: 1;
+    &.consult_background {
+        margin: 10rem 0 0 0;
+        color: #fff;
+        .consult__form {
+            .form__input {
+                border-bottom-color: currentColor;
+            }
+            .form__checkbox {
+                input {
+                    &:checked {
+                        + span {
+                            &:before {
+                                border-top-color: transparent;
+                                border-right-color: transparent;
+                            }
+                        }
+                    }
+                }
+                span {
+                    &:before {
+                        border-color: inherit;
+                    }
+                }
+            }
+        }
+    }
 }
 .consult__box {
     display: flex;
+    position: relative;
 }
 .consult__form {
     flex: 0 0 auto;
     width: 45%;
     padding: 0 4%;
+    margin: 10rem 0;
 }
-
+.consult__img {
+    flex: 0 0 auto;
+    align-self: flex-end;
+    width: 50%;
+    margin: -10rem 0 0 5%;
+    img {
+        display: block;
+        max-width: 100%;
+        width: auto;
+        height: auto;
+        margin: 0 auto;
+    }
+}
 @media only screen and (max-width : 1460px) {
 
 }
@@ -23,11 +66,19 @@
 }
 
 @media only screen and (max-width : 768px) {
+    .consult {
+        margin: 0;
+    }
     .consult__box {
         display: block;
+        padding: 1px 0 0 0;
     }
     .consult__form {
         width: auto;
+    }
+    .consult__img {
+        width: auto;
+        margin: 8rem 0 0 0;
     }
 }
 

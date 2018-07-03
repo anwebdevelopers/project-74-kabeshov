@@ -9,29 +9,29 @@
 *:focus:-ms-input-placeholder      {color: transparent}
 
 *::-webkit-input-placeholder {
-	color: #666;
+	color: inherit;
 	opacity: 1;
 }
 *:-moz-placeholder {
-	color: #666;
+	color: inherit;
 	opacity: 1;
 }
 *::-moz-placeholder {
-	color: #666;
+	color: inherit;
 	opacity: 1;
 }
 
 *:-ms-input-placeholder {
-	color: #666;
+	color: inherit;
 	opacity: 1;
 }
 body input:focus:required:invalid,
 body textarea:focus:required:invalid {
-	color: #666;
+	color: inherit;
 }
 body input:required:valid,
 body textarea:required:valid {
-	color: #666;
+	color: inherit;
 }
 *,
 *:before,
@@ -80,7 +80,7 @@ a {
 .button {
 	@include btn;
 	position: relative;
-	padding: 3.5rem 5rem;
+	padding: 3rem 5rem;
 	// box-shadow: inset 0 0 0 3px $beige;
 	color: #fff;
 	font-size: 2.8rem;
@@ -97,6 +97,10 @@ a {
 .title {
 	margin: 0;
 	font-size: 5.5rem;
+	line-height: 1.1;
+	+ .text {
+		margin-top: 4rem;
+	}
 }
 .color-blue {
 	color: $color-blue;
@@ -120,8 +124,12 @@ a {
 	// border-radius: 7.6rem;
 	font-size: 3.2rem;
 	font-weight: 500;
-	// color: #fff;
+	color: inherit;
 	border-bottom: 1px solid $color-green;
+	transition: all .3s ease;
+	&:hover, &:focus {
+		border-color: $color-blue;
+	}
 }
 .form__checkbox {
 	display: block;
@@ -163,25 +171,106 @@ a {
 .form__submit {
 	margin: 8rem 0 0 0;
 }
+.text {
+	* {
+		max-width: 100% !important;
+	}
+	h1,h2,h3,h4,h5,h6 {
+		font-weight: 700;
+		text-transform: uppercase;
+		// color: #3436c0;
+	}
+	p,ul,ol,img {
+		margin-top: 3rem;
+		margin-bottom: 3rem;
+	}
+	ul,ol {
+		li {
+			margin: 1.5rem 0 0 0;
+		}
+	}
+	ul {
+		padding: 0;
+	    list-style: none;
+	    li {
+	        padding: 0 0 0 4rem;
+	        background-image: linear-gradient($color-blue, $color-blue);
+	        background-position: 0 1.4rem;
+	        background-size: 2.5rem 2px;
+	        background-repeat: no-repeat;
+	    }
+	}
+	a:not([class]) {
+		text-decoration: none;
+		color: $color-blue;
+		transition: all 0.5s ease;
+		&:active,
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+	*:first-child {
+		margin-top: 0;
+	}
+	*:last-child {
+		margin-bottom: 0;
+	}
+	*.align-left {
+		float: left;
+		margin-right: 5rem;
+	}
+	*.align-right {
+		float: right;
+		margin-right: 5rem;
+	}
+	table {
+        border-collapse: separate;
+        border-spacing: 2px;
+        border-color: #dadada;
+        display: block;
+        overflow-x: auto;
+		max-width: 100%;
+		font-size: 1.4rem;
+
+        th, td {
+            padding: 2rem;
+            text-align: left;
+        }
+        th {
+            background-color: $color-blue;
+			color: #fff;
+        }
+        td {
+            background-color: #fff;
+			color: #000;
+        }
+    }
+}
 
 //Custom Styles Here
 @import "components/header.scss";
 @import "components/about.scss";
 @import "components/consult.scss";
 @import "components/symptoms.scss";
-
-//@import "build/scss/components/magnific-popup.scss";
+@import "components/call.scss";
+@import "components/exhortation.scss";
+@import "components/advantages.scss";
+@import "components/steps.scss";
+@import "components/reviews.scss";
+@import "components/clinic.scss";
+@import "components/faq.scss";
 
 //ALWAYS END
 //@import "components/media.scss";
 
 //Load Libs SASS
 //@import "html/libs/animate/animate.sass";
-//@import "html/libs/OwlCarousel2-2.2.1/dist/assets/owl.carousel.min";
+@import "html/libs/OwlCarousel2-2.2.1/dist/assets/owl.carousel.min";
 //@import "html/libs/superfish/dist/css/superfish";
 //@import "html/libs/font-awesome/scss/font-awesome.scss";
 //@import "html/libs/jQuery.mmenu/dist/css/jquery.mmenu.all";
-//@import "html/libs/magnific-popup/dist/magnific-popup";
+@import "html/libs/magnific-popup/dist/magnific-popup";
+@import "build/scss/components/magnific-popup.scss";
 
 @media only screen and (max-width : 1460px) {
 	html {
